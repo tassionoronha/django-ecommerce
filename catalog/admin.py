@@ -13,8 +13,6 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'category','created', 'modified']
     search_fields = ['name', 'slug', 'category__name']
     list_filter = ['created', 'modified']
-    
-
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
